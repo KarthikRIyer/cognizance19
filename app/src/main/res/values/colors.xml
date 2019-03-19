@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#343434</color>
+    <color name="colorPrimaryDark">#464646</color>
+    <color name="colorAccent">#00AEEF</color>
     <color name="grayText">#707070</color>
     <color name="grayHeadings">#373737</color>
     <color name="editText_blue">#78849E</color>
     <color name="editTextgray">#343434</color>
     <color name="orGray">#6B6B6B</color>
+    <color name="mainbackgorund">#EFEFEF</color>
+    <color name="complete_your_profile_color">#343434</color>
+    <color name="bottom_navigation_view_color">#FFFFFF</color>
+    <color name="bottom_nav_text_color">#B4B4B4</color>
+    <color name="userType_gray">#464646</color>
+    <color name="bg_blue">#00AEEF</color>
+    <color name="fragment_bg">#ffefefef</color>
 </resources>

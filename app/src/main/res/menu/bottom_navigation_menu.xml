@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/events"
+        android:icon="@drawable/ic_exhibition"
+        android:title="@string/events"/>
+    <item
+        android:id="@+id/workshops"
+        android:icon="@drawable/ic_workshop"
+        android:title="@string/workshops"/>
+    <item
+        android:id="@+id/whatsNew"
+        android:icon="@drawable/ic_whats_new"
+        android:title="@string/what_s_new"/>
+    <item
+        android:id="@+id/schedule"
+        android:icon="@drawable/ic_date_range_black_24dp"
+        android:title="@string/schedule"
+        />
+</menu>

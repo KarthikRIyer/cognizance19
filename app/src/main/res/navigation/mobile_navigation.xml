@@ -4,28 +4,201 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/landingFragment2">
+    
+    <fragment
+        android:id="@+id/centerStageAndDepartmentalFragment"
+        android:name="com.mdg.iitr.cognizance19.view.EventCenterStageAndDepartmentalFragment"
+        android:label="fragment_center_stage_and_departmental"
+        tools:layout="@layout/fragment_event_center_stage_and_departmental">
+        <action
+            android:id="@+id/action_centerStageAndDepartmentalFragment_to_speceficEventFragment"
+            app:destination="@id/speceficEventFragment"
+              />
+        <action
+            android:id="@+id/action_centerStageAndDepartmentalFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/finfestAndLitfestFragment"
+        android:name="com.mdg.iitr.cognizance19.view.EventFinfestAndLitfestFragment"
+        android:label="fragment_finfest_and_litfest"
+        tools:layout="@layout/fragment_event_finfest_and_litfest" >
+        <action
+            android:id="@+id/action_whatsNewFragment_to_specificEventFragment"
+            app:destination="@id/speceficEventFragment"/>
+        <action
+            android:id="@+id/action_finfestAndLitfestFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speceficEventFragment"
+        android:name="com.mdg.iitr.cognizance19.view.SpecificEventFragment"
+        android:label="fragment_specefic_event"
+        tools:layout="@layout/fragment_specific_event" >
+        <action
+            android:id="@+id/action_speceficEventFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speceficWorkshopFragment"
+        android:name="com.mdg.iitr.cognizance19.view.SpecificWorkshopFragment"
+        android:label="fragment_specefic_workshop"
+        tools:layout="@layout/fragment_specific_workshop" >
+        <action
+            android:id="@+id/action_speceficWorkshopFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/landingFragment2"
-        android:name="com.mdgiitr.karthik.cognizance19.view.LandingFragment"
+        android:name="com.mdg.iitr.cognizance19.view.LandingFragment"
         android:label="fragment_landing"
         tools:layout="@layout/fragment_landing">
         <action
             android:id="@+id/action_landingFragment2_to_userLoginFragment"
             app:destination="@id/userLoginFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+              />
+        <action
+            android:id="@+id/action_landingFragment2_to_homeMenuFragment2"
+            app:destination="@id/homeMenuFragment"
+              />
+    </fragment>
+    <fragment
+        android:id="@+id/userLoginFragment"
+        android:name="com.mdg.iitr.cognizance19.view.UserLoginFragment"
+        android:label="fragment_user_login"
+        tools:layout="@layout/fragment_user_login">
+        <action
+            android:id="@+id/action_userLoginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+              />
+        <action
+            android:id="@+id/action_userLoginFragment_to_homeMenuFragment"
+            app:destination="@id/homeMenuFragment"
+              />
+        <action
+            android:id="@+id/action_userLoginFragment_to_completeYourProfileFragment"
+            app:destination="@id/completeYourProfileFragment"
+              />
+    </fragment>
+    <fragment
+        android:id="@+id/completeYourProfileFragment"
+        android:name="com.mdg.iitr.cognizance19.view.CompleteYourProfileFragment"
+        android:label="fragment_complete_your_profile"
+        tools:layout="@layout/fragment_complete_your_profile">
+        <action
+            android:id="@+id/action_completeYourProfileFragment_to_homeMenuFragment"
+            app:destination="@id/homeMenuFragment"
+              />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.mdg.iitr.cognizance19.view.MyProfileFragment"
+        android:label="my_profile"
+        tools:layout="@layout/fragment_my_profile">
+        <action
+            android:id="@+id/action_myProfileFragment_to_landingFragment2"
+            app:destination="@id/landingFragment2"
+              />
+        <action
+            android:id="@+id/action_myProfileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+              />
+        <action
+            android:id="@+id/action_myProfileFragment_to_dashboardSPPFragment"
+            app:destination="@id/dashboardSPPFragment"
+              />
+        <action
+            android:id="@+id/action_myProfileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+              />
+        <action
+            android:id="@+id/action_myProfileFragment_to_initPaymentFragment2"
+            app:destination="@id/initPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.mdg.iitr.cognizance19.view.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+              />
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
-        android:name="com.mdgiitr.karthik.cognizance19.view.ChangePasswordFragment"
+        android:name="com.mdg.iitr.cognizance19.view.ChangePasswordFragment"
         android:label="fragment_change_password"
         tools:layout="@layout/fragment_change_password" />
     <fragment
-        android:id="@+id/userLoginFragment"
-        android:name="com.mdgiitr.karthik.cognizance19.view.UserLoginFragment"
-        android:label="fragment_user_login"
-        tools:layout="@layout/fragment_user_login" />
+        android:id="@+id/homeMenuFragment"
+        android:name="com.mdg.iitr.cognizance19.view.HomeMenuFragment"
+        android:label="fragment_home_menu"
+        tools:layout="@layout/fragment_home_menu">
+        <action
+            android:id="@+id/action_homeMenuFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment"
+              />
+        <action
+            android:id="@+id/action_homeMenuFragment_to_centerStageAndDepartmentalFragment"
+            app:destination="@id/centerStageAndDepartmentalFragment"
+              />
+        <action
+            android:id="@+id/action_homeMenuFragment_to_workshopFragment"
+            app:destination="@id/workshopFragment"
+            />
+        <action
+            android:id="@+id/action_homeMenuFragment_to_whatsnewFragment"
+            app:destination="@id/finfestAndLitfestFragment"
+            />
+        <action
+            android:id="@+id/action_homeMenuFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardSPPFragment"
+        android:name="com.mdg.iitr.cognizance19.view.DashboardSPPFragment"
+        android:label="fragment_dashboard_spp"
+        tools:layout="@layout/fragment_dashboard_spp" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.mdg.iitr.cognizance19.view.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfile_to_myProfile"
+            app:destination="@id/myProfileFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/workshopFragment"
+        android:name="com.mdg.iitr.cognizance19.view.WorkshopFragment"
+        android:label="fragment_workshop"
+        tools:layout="@layout/fragment_workshop" >
+        <action
+            android:id="@+id/action_workshopFragment_to_specificWorkshopFragment"
+            app:destination="@id/speceficWorkshopFragment"
+            />
+        <action
+            android:id="@+id/action_workshopFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initPaymentFragment"
+        android:name="com.mdg.iitr.cognizance19.view.InitPaymentFragment"
+        android:label="fragment_init_payment"
+        tools:layout="@layout/fragment_init_payment" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.mdg.iitr.cognizance19.view.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
 </navigation>
